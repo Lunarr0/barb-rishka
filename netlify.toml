@@ -2,6 +2,14 @@
   publish = "."  # publish from root directory since there's no build step
   command = ""   # no build command needed for static sites
 
+# Redirect all HTTP requests to HTTPS
+[[redirects]]
+  from = "http://*"
+  to = "https://rishka.site"
+  status = 301
+  force = true
+
+# Redirect all requests to the index.html file (SPA routing)
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -9,4 +17,4 @@
 
 # Custom domain configuration
 [context.production]
-  environment = { URL = "rishka.site" } 
+  environment = { URL = "rishka.site" }
