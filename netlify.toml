@@ -1,0 +1,12 @@
+[build]
+  publish = "build"  # or your build output directory
+  command = "npm run build"  # or your build command
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Custom domain configuration
+[context.production]
+  environment = { URL = "your-domain.com" } 
