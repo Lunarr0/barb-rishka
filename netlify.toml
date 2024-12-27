@@ -1,6 +1,6 @@
 [build]
-  publish = "build"  # or your build output directory
-  command = "npm run build"  # or your build command
+  publish = "."  # publish from root directory since there's no build step
+  command = ""   # no build command needed for static sites
 
 [[redirects]]
   from = "/*"
@@ -9,4 +9,4 @@
 
 # Custom domain configuration
 [context.production]
-  environment = { URL = "your-domain.com" } 
+  environment = { URL = "rishka.site" } 
