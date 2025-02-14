@@ -111,19 +111,51 @@ body {
 /* Responsive Design */
 @media (max-width: 600px) {
     .container {
-        padding: 1.5rem;
+        padding: 1rem;
     }
 
     .title {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .random-quote {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .btn {
         padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .websites-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .website-box {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .website-box img {
+        height: 180px;
+    }
+
+    .quote-box {
+        padding: 1rem;
+    }
+
+    .quote-container {
+        gap: 1rem;
+    }
+}
+
+/* Add a medium-size breakpoint for tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    .websites-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
